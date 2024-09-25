@@ -22,15 +22,18 @@ matplotlib==3.9.2
 mdurl==0.1.2
 ml-dtypes==0.4.1
 namex==0.0.8
+networkx==3.3
 numpy==1.26.4
 opt-einsum==3.3.0
 optree==0.12.1
 packaging==24.1
+pandas==2.2.3
 pillow==10.4.0
 protobuf==4.25.5
 Pygments==2.18.0
 pyparsing==3.1.4
 python-dateutil==2.9.0.post0
+pytz==2024.2
 requests==2.32.3
 rich==13.8.1
 scikit-learn==1.5.2
@@ -43,6 +46,7 @@ tensorflow==2.17.0
 termcolor==2.4.0
 threadpoolctl==3.5.0
 typing_extensions==4.12.2
+tzdata==2024.1
 urllib3==2.2.3
 Werkzeug==3.0.4
 wheel==0.44.0

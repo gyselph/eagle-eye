@@ -2,8 +2,9 @@
 
 This code allows you to train a transformer for classification, from scratch.
 The input for the transformer are sequences, where each element in the sequence is a 1-d vector.
+The transformer output is a softmax with 2 classes (benign vs. malicious).
 
-Reference: https://www.tensorflow.org/text/tutorials/transformer
+Reference for transformer training implementation: https://www.tensorflow.org/text/tutorials/transformer
 """
 
 import tensorflow as tf
@@ -116,6 +117,8 @@ class Transformer(tf.keras.Model):
     """
     A transformer encoder classifier
     """
+    NUMBER_OF_CLASSES = 2
+
     def __init__(self, num_layers, d_model, num_heads, key_dim, dff,
                  dropout_rate, positional_encoding_period, regularization):
         super().__init__()
@@ -133,7 +136,7 @@ class Transformer(tf.keras.Model):
                 for _ in range(num_layers)]
         self.final_ff = tf.keras.layers.Dense(dff, activation='relu', kernel_regularizer=l2(regularization))
         self.dropout_final_ff = tf.keras.layers.Dropout(dropout_rate)
-        self.final_ff_softmax = tf.keras.layers.Dense(2, activation = 'softmax')
+        self.final_ff_softmax = tf.keras.layers.Dense(self.NUMBER_OF_CLASSES, activation = 'softmax')
 
     def call(self, x: tf.Tensor) -> tf.Tensor:
         """The forward path of this TF model
