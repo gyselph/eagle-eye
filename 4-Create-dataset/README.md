@@ -2,6 +2,8 @@
 
 This folder contains all code necessary to transform process provenance graphs into an ML training dataset. The input of this data pipeline is a set of process provenance, enriched with security features, all represented in JSON format. The output is a numpy dataset, split into a *training* and *validation* part, where each sample is a behavior sequence of fixed size.
 
+> [!IMPORTANT] If you wish to create your own custom dataset, you need graphs with security features, see Step 2: Security-features.
+
 ## Run the code
 
 - Navigate to the repository root directory

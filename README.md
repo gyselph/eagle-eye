@@ -4,7 +4,7 @@ This is the open source implementation of the [EagleEye paper](https://arxiv.org
 
 ![EagleEye system overview](figures/system_diagram_code_steps.png)
 
-**Repository content**:
+## Repository content - overview
 
 * [Step 1: Malware dataset](./1-Malware-dataset) *(Coming soon)*: The malicious samples of the dataset "REE-2023", consisting of 7'000 provenance graphs.
 * [Step 2: Extract security features](2-Security-features) *(Coming soon)*: Enrich raw provenance graphs with rich security features. Additionally, this folder contains a detailed description of all security features leveraged by EagleEye.
@@ -31,7 +31,7 @@ EagleEye requires behavior data collected on endpoint devices. Typically, such b
 
 **Answer**: Yes, in section V.B.
 
-### Step 2: Extract security features
+## Step 2: Extract security features
 
 ![EagleEye system overview](figures/provenance_graph_security_features.png)
 
@@ -71,7 +71,7 @@ The result of this processing step are provenance graphs with security features 
 
 **Answer**: Yes, in section V.D.
 
-### Step 4: Create dataset
+## Step 4: Create dataset
 
 ![A sequence of security features](figures/security_feature_sequence.png)
 
@@ -91,7 +91,7 @@ The end result is a large numpy array with the following dimensions: (`S`: numbe
 
 **Answer**: Yes, in section V.E.
 
-### Step 5: EagleEye training
+## Step 5: EagleEye training
 
 ![EagleEye transformer architecture](figures/transformer_architecture.png)
 
@@ -111,3 +111,20 @@ The transformer has an encoder-only architecture and is similar to a *BERT-Tiny*
 
 **Answer**: Yes, in section IV.
 
+## Cite this work
+
+We hope this open source implementation of EagleEye brings new ideas and opportunities to the security research community. You can feed your own behavior dataset into the provided data processing pipeline, and train your own Transformer model. If you find this research useful, please consider referencing our work:
+
+```
+@inproceedings{gysel2024eagleeye,
+  title={EagleEye: Attention to Unveil Malicious Event Sequences from Provenance Graphs},
+  author={Gysel, Philipp and W{\"u}est, Candid and Nwafor, Kenneth and Ja{\v{s}}ek, Otakar and Ustyuzhanin, Andrey and Divakaran, Dinil Mon},
+  booktitle={2024 APWG Symposium on Electronic Crime Research (eCrime)},
+  year={2024},
+  organization={IEEE}
+}
+```
+
+## Presentation at the eCrime symposium
+
+We presented our research paper at eCrime 2024. You can find our presentation slide deck on [Google Drive](https://docs.google.com/presentation/d/1A4wdJlc1zMCmHiyUBqyCNDpH2EckyLpG/edit?usp=sharing&ouid=103946408468324257180&rtpof=true&sd=true).
