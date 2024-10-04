@@ -6,7 +6,7 @@ This is the open source implementation of the [EagleEye paper](https://arxiv.org
 
 ## Repository content - overview
 
-* [Step 1: Malware dataset](./1-Malware-dataset) *(Coming soon)*: The malicious samples of the dataset "REE-2023", consisting of 7'000 provenance graphs.
+* [Step 1: Malware dataset](./1-Malware-dataset): The malicious samples of the dataset "REE-2023", consisting of 7'000 provenance graphs.
 * [Step 2: Extract security features](2-Security-features) *(Coming soon)*: Enrich raw provenance graphs with rich security features. Additionally, this folder contains a detailed description of all security features leveraged by EagleEye.
 * [Step 3: Command-line embedding](3-Command-line-embedding) *(Coming soon)*: The implementation for embedding command-line strings into high-dimensional vectors. This step adds additional security features to the provenance graphs.
 * [Step 4: Create dataset](4-Create-dataset): Turn the enriched provenance graphs into a dataset. This data pipeline starts with graphs generated in the previous two steps, and ends with a dataset which can be used for training of the ML model.
