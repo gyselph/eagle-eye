@@ -99,7 +99,9 @@ def cmd2vec(graphs: list) -> list[np.ndarray]:
 
 def prepare_data():
     """
-    Prepare the data for training.
+    Prepare the data for training. Transform command line strings from precess provenance graphs into
+    high dimensional embedding vectors using the sentence transformer.
+
     Provenance graphs should be stored in the data/graphs directory in the following structure:
         data/graphs/malicious/train - contains the training set of malicious graphs
         data/graphs/malicious/val - contains the validation set of malicious graphs
@@ -107,7 +109,7 @@ def prepare_data():
         data/graphs/benign/train - contains the training set of benign graphs
         data/graphs/benign/val - contains the validation set of benign graphs
         data/graphs/benign/test - contains the test set of benign graphs
-    The function will save the extracted features to the data/preprocessed directory.
+    The function will save the extracted features as csv files in the data/preprocessed directory.
     return: benign training, validation, test sets and malicious training, validation, test sets
     """
     begin = time.time()

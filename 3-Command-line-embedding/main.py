@@ -1,5 +1,6 @@
 import os.path
 import time
+from typing import Tuple
 
 import numpy as np
 import pandas as pd
@@ -15,9 +16,13 @@ np.random.seed(100)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-def preprocess_data(force: bool = False) -> tuple:
+def preprocess_data(force: bool = False) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """
     Prepare the data for training. If the data is already preprocessed, it will load the preprocessed data.
+
+    The preparation process takes command line strings fom provenance graphs and
+    transforms them to high dimensional embedding vectors stored as csv files
+
     param: force: bool: If True, the data will be re-preprocessed
     """
     if not force and os.path.exists('data/preprocessed/benign') and os.path.exists('data/preprocessed/malicious'):
@@ -43,6 +48,9 @@ def train_autoencoder(
 ) -> AutoEncoder:
     """
     Train the command line autoencoder model and test it on the test data.
+    As input, the autoencoder takes the high dimensional embedding vectors of the command line stings
+    obtained in the preprocessing step and compresses them 16-dimensional vectors
+
     param: ben_train: pd.DataFrame: Benign training data
     param: ben_val: pd.DataFrame: Benign validation data
     param: ben_test: pd.DataFrame: Benign test data

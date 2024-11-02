@@ -70,7 +70,6 @@ def enrich_folder_graphs(folder_source: str, folder_target: str) -> None:
     Perform command line embedding and enrich all graphs in a folder.
 
     Search for graphs recursively within the source folder.
-    Make sure the target folder will have the same folder structure as the source folder.
     Arguments:
         - folder_source: The folder with the source graphs
         - folder_target: The folder where the enriched graphs will be stored
@@ -97,7 +96,10 @@ def enrich_folder_graphs(folder_source: str, folder_target: str) -> None:
 
 
 if __name__ == '__main__':
-    # Assign the input and output folders
+    # Assign the input and output folders. Ensure that the input folders
+    # here contain the process provenance graphs to be enriched.
+    # it is recommended to use the same folder structure for the data
+    # employed in training the Autoencoder as described in preprocessing.py
     input_folders = [
         "data/graphs/malicious/test/",
     ]
