@@ -1,0 +1,58 @@
+{
+    "child_process_id": "8615704416628",
+    "image_filename": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\POWERPNT.EXE",
+    "cmdline": "\"C:\\Program Files\\Microsoft Office\\Root\\Office16\\POWERPNT.EXE\" \"C:\\Users\\user-name\\Desktop\\Acronis Cyber Files\\iot device classification\\architecture\\bi-lstm architecture.pptx\" /ou \"\"",
+    "id": "8615704416628.0",
+    "children": [
+        {
+            "event_uuid_v4": "53efae41-78c4-47a5-8eb7-7ecd344a55c0",
+            "open_options": "32",
+            "open_access_flags": "1179785",
+            "event_type": "si_create_file",
+            "object_name": "\\Device\\HarddiskVolume4\\WINDOWS\\Prefetch\\POWERPNT.EXE-396E33B0.pf",
+            "timestamp": "1665131422361421",
+            "create_file_disposition": "1",
+            "thread_uid": "-28000448774016",
+            "id": "8615704416628.191773"
+        },
+        {
+            "parent_process_id": "8615704416628",
+            "child_process_id": "14113262547944",
+            "event_type": "si_create_process",
+            "image_filename": "C:\\Program Files\\Zoom\\bin\\Zoom.exe",
+            "cmdline": "\"C:\\Program Files\\Zoom\\bin\\Zoom.exe\" --action=preload --runaszvideo=TRUE  --useroption=2349192664283349135 --useroption2=-3458764513817624512 --useroption3=2305914614914058241 --useroption4=0 --useroption5=4504534051398924 --useroption6=0 --userroomoption=0 --userroomoption2=0 --userroomoption5=0 --haszoomim=1",
+            "timestamp": "1665144094925472",
+            "id": "8615704416628.1",
+            "children": [
+                {
+                    "event_uuid_v4": "e480f4ef-fa14-4145-b42a-fc09b8a7c22a",
+                    "object_size": "29",
+                    "object_info.blob_size": "29",
+                    "object_info.blob_dump": "01382d000000001000384e96281a000000000000002d00000000000000",
+                    "object_info.blob_type": "3",
+                    "event_type": "si_set_value_key",
+                    "object_name": "\\REGISTRY\\USER\\S-1-5-21-2197411953-2306974247-3794874973-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\IntranetName",
+                    "timestamp": "1665131423071751",
+                    "thread_uid": "-28000448774016",
+                    "id": "14113262547944.0"
+                },
+                {
+                    "saddr": "127.0.0.1",
+                    "seqnum": "0",
+                    "pid": "2084",
+                    "event_uuid_v4": "63d511ed-5b1d-43db-8e95-68c3d7cd21e4",
+                    "sport": "56817",
+                    "startime": "2536720",
+                    "connid": "0",
+                    "dport": "56818",
+                    "endtime": "2536720",
+                    "daddr": "127.0.0.1",
+                    "size": "1",
+                    "event_type": "etw_tcp_send_ipv4",
+                    "timestamp": "1665145913156141",
+                    "id": "14113262547944.1"
+                }
+            ]
+        }
+    ]
+}
