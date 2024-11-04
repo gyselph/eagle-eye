@@ -101,9 +101,9 @@ These events represent the start of a new process.
 |---|---|---|---|
 |File path|`encoding_file_path`|Categorical|Same as `encoding_process_path`. All in all, there are 19 path categories.|
 |File extension|`encoding_file_extension`|Categorical|The file extension of files being accessed. We searched for the 50 most frequently occurring extensions, and use an `OTHER` catch-all class for the rare extensions.|
-||`encoding_open_options`|Categorical||
-||`encoding_open_access_flags`|Categorical||
-||`encoding_create_file_disposition`|Categorical||
+|File open options|`encoding_open_options`|Categorical|Read, write, or read-write access.|
+|File access flags|`encoding_open_access_flags`|Categorical|Shared or exclusive file access.|
+|File disposition|`encoding_create_file_disposition`|Categorical|As per official [Microsoft documentation](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea), this flag controls the behavior when opening files. Options include file appending, overwriting, or fail if file doesn't exist.|
 |Number of bytes accessed|`encoding_file_access_amount`|Numerical|The number of bytes written or read|
 
 ### Windows registry access
