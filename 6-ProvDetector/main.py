@@ -7,7 +7,7 @@ from sklearn import metrics
 
 from prov_detector.frequency_db import create_frequency_db
 from prov_detector.rarest_paths import create_rarest_paths
-from prov_detector.process_paths import convert_paths_to_sentences
+from prov_detector.path_to_sentence import paths_to_sentences
 from prov_detector.doc2vec import embed_doc2vec, train_doc2vec
 from prov_detector.random_forest import train_rf, test_rf
 
@@ -31,14 +31,14 @@ def run():
     # Training stage
     frequency_db, entities_db = create_frequency_db(TRAIN_DATA)
     rare_paths_train = create_rarest_paths(frequency_db, entities_db, TRAIN_DATA, NUM_RARE_PATHS_PER_GRAPH_TRAIN)
-    _, labels_train, sentences_train = convert_paths_to_sentences(rare_paths_train, SUBPATH_LENGTH_LIMIT, MAX_NUM_SUBPATHS_PER_GRAPH)
+    _, labels_train, sentences_train = paths_to_sentences(rare_paths_train, SUBPATH_LENGTH_LIMIT, MAX_NUM_SUBPATHS_PER_GRAPH)
     doc2vec_model = train_doc2vec(sentences_train, DOC2VEC_VECTOR_DIM, DOC2VEC_EPOCHS)
     embeddings_train = embed_doc2vec(doc2vec_model, sentences_train)
     rf_model = train_rf(embeddings_train, labels_train, RF_N_ESTIMATORS, RF_MAX_DEPTH)
 
     # Test stage
     rare_paths_test = create_rarest_paths(frequency_db, entities_db, TEST_DATA, NUM_RARE_PATHS_PER_GRAPH_TEST)
-    graph_ids_test, labels_test, sentences_test = convert_paths_to_sentences(rare_paths_test, SUBPATH_LENGTH_LIMIT,
+    graph_ids_test, labels_test, sentences_test = paths_to_sentences(rare_paths_test, SUBPATH_LENGTH_LIMIT,
                                                                              MAX_NUM_SUBPATHS_PER_GRAPH)
     embeddings_test = embed_doc2vec(doc2vec_model, sentences_test)
     predictions_test = test_rf(embeddings_test, rf_model)

@@ -12,7 +12,7 @@ GRAPH_INDEX_IN_CSV = 9
 
 def create_frequency_db(event_folder: str) -> Tuple[Dict,List]:
     """
-    Main entry point to compute frequency DB.
+    Create a frequency map for system entities and their interactions.
 
     :param event_folder: The folder where all provenance graphs are located.
     :return: A connection frequency plus a list of system entities per graph
