@@ -1,24 +1,16 @@
 import numpy as np
 import os
-from .common import *
+from .common import read_all_events
 
 
 GRAPH_INDEX_IN_CSV = 9
 
 
-def load_frequency_db(frequency_db, entities_db):
-    frequency_db = read_object_from_file(frequency_db)
-    entities_db = read_object_from_file(entities_db)
-    return frequency_db, entities_db
-
-
-def create_frequency_db(event_folder, target_frequency_db, target_entities_db):
+def create_frequency_db(event_folder):
     # read in events from all event CSV files
     _, events_as_list, list_of_graph_ids, _ = read_all_events(event_folder)
     print("Generating frequency database for {} events ...".format(len(events_as_list)))
     frequency_db, entities_db = createFreqDict(events_as_list, list_of_graph_ids, GRAPH_INDEX_IN_CSV)
-    write_object_to_file(frequency_db, target_frequency_db)
-    write_object_to_file(entities_db, target_entities_db)
     return frequency_db, entities_db
 
 

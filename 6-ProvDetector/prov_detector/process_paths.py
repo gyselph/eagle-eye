@@ -15,17 +15,15 @@ INDEX_GRAPH_LABEL = 1
 INDEX_PATHS = 2
 WORD_SEPERATOR = " ||| " # must NOT be present in dataset!
 
-def convert_paths_to_sentences(rare_paths, sentence_db, subpath_length_limit, max_num_subpaths_per_graph):
+def convert_paths_to_sentences(rare_paths, subpath_length_limit, max_num_subpaths_per_graph):
     """
     Do all preprocessing on paths:
     - split huge paths into manageable sub-paths
     - translate paths from complex data format to english sentences
     - do some cleanup on data, like normalizing user names and removing local IP addresses
-    - store result in db
 
     Parameters:
         - rare_paths: Rare paths in proprietary format
-        - sentence_db: File in which all sentences will get stored
         - path_length_limit: Max length of a path, split up longer paths
         - max_num_subpaths: The maximal number of sub-paths we use, per graph
     
@@ -36,8 +34,6 @@ def convert_paths_to_sentences(rare_paths, sentence_db, subpath_length_limit, ma
     """
     graph_names, sub_path_labels, sub_paths = chunk_paths(rare_paths, subpath_length_limit, max_num_subpaths_per_graph)
     sentences = [pathToSentence(s) for s in sub_paths]
-    print("Writing {} sentences to DB".format(len(sentences)))
-    np.savez_compressed(sentence_db, graph_names = graph_names, labels = sub_path_labels, sentences = sentences)
     return np.array(graph_names), np.array(sub_path_labels), np.array(sentences)
 
 

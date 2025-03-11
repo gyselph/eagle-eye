@@ -17,11 +17,10 @@ def train_doc2vec(sentences, doc2vec_model_file, doc2vec_embedding_db, embedding
     return embeddings
 
 
-def train_doc2vec_dont_embed(sentences, doc2vec_model_file, embedding_dim, epochs):
+def train_doc2vec_dont_embed(sentences, embedding_dim, epochs):
     tokenized_sentences = preprocess_sentences(sentences)
     print("Starting Doc2Vec training on {} data points ...".format(len(tokenized_sentences)))
     model = train_model(tokenized_sentences, embedding_dim, epochs)
-    store_model(doc2vec_model_file, model)
     return model
 
 
@@ -59,10 +58,8 @@ def load_model(dec2vec_model_file):
     return Doc2Vec.load(dec2vec_model_file)
 
 
-def embed_raw_sentences_doc2vec(dec2vec_model_file, doc2vec_embeddings_file, raw_sentences):
-    model = load_model(dec2vec_model_file)
+def embed_raw_sentences_doc2vec(doc2vec_model, raw_sentences):
     tokenized_sentences = preprocess_sentences(raw_sentences)
     print("Embedding {} sentences via Doc2Vec ...".format(len(tokenized_sentences)))
-    embeddings = embed_preprocessed_sentences(tokenized_sentences, model)
-    store_embeddings(doc2vec_embeddings_file, embeddings)
+    embeddings = embed_preprocessed_sentences(tokenized_sentences, doc2vec_model)
     return embeddings

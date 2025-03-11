@@ -1,5 +1,5 @@
 import os
-from .common import *
+from .common import read_all_events
 import math
 import bisect
 import networkx as nx
@@ -23,7 +23,7 @@ INDEX_PID_1 = 8
 NUM_PROCESSES = 8
 
 
-def create_rarest_paths(frequency_db, entities_db, event_folder, target_db_rarest_paths, num_rare_paths_per_graph):
+def create_rarest_paths(frequency_db, entities_db, event_folder, num_rare_paths_per_graph):
     events_as_dataframe, _, _, graph_labels = read_all_events(event_folder)
     df_graphs = seperate_graphs(events_as_dataframe)
     print("Generating rarest paths database for {} events and {} graphs".format(len(events_as_dataframe), len(df_graphs)))
@@ -41,7 +41,6 @@ def create_rarest_paths(frequency_db, entities_db, event_folder, target_db_rares
             )
         )
     print("\nFinished computation of rarest paths")
-    write_object_to_file(paths_for_each_graph, target_db_rarest_paths)
     return paths_for_each_graph
 
 
