@@ -24,7 +24,7 @@ NUM_PROCESSES = 8
 
 
 def create_rarest_paths(frequency_db, entities_db, event_folder, num_rare_paths_per_graph):
-    events_as_dataframe, _, _, graph_labels = read_all_events(event_folder)
+    events_as_dataframe, graph_labels = read_all_events(event_folder)
     df_graphs = seperate_graphs(events_as_dataframe)
     print("Generating rarest paths database for {} events and {} graphs".format(len(events_as_dataframe), len(df_graphs)))
     with mp.Pool(NUM_PROCESSES) as pool:

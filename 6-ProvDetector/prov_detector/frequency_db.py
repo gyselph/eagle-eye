@@ -8,7 +8,9 @@ GRAPH_INDEX_IN_CSV = 9
 
 def create_frequency_db(event_folder):
     # read in events from all event CSV files
-    _, events_as_list, list_of_graph_ids, _ = read_all_events(event_folder)
+    events_as_dataframe, _ = read_all_events(event_folder)
+    events_as_list = events_as_dataframe.values.tolist()
+    list_of_graph_ids = sorted(events_as_dataframe['graphId'].unique())
     print("Generating frequency database for {} events ...".format(len(events_as_list)))
     frequency_db, entities_db = createFreqDict(events_as_list, list_of_graph_ids, GRAPH_INDEX_IN_CSV)
     return frequency_db, entities_db
