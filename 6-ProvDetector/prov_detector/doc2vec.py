@@ -23,7 +23,7 @@ def train_doc2vec(sentences: np.ndarray, embedding_dim: int, epochs: int) -> Doc
     return model
 
 
-def embed_raw_sentences_doc2vec(doc2vec_model: Doc2Vec, raw_sentences: np.ndarray) -> np.ndarray:
+def embed_doc2vec(doc2vec_model: Doc2Vec, raw_sentences: np.ndarray) -> np.ndarray:
     """
     Embed senteces using a trained Doc2Vec model.
 
