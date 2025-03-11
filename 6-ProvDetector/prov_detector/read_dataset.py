@@ -1,5 +1,8 @@
+"""Read in dataset from disk"""
+
 import pandas as pd
 from pathlib import Path
+from typing import Tuple, Dict
 
 
 SEPERATOR = ","
@@ -9,9 +12,11 @@ BENIGN_LABEL = 0
 MALICIOUS_LABEL = 1
 
 
-def read_all_events(event_folder):
+def read_all_events(event_folder: str) -> Tuple[pd.DataFrame, Dict]:
     """
     Fetch all behavior events from disk, and put them in one big pandas dataframe.
+
+    Each CSV file in `event_folder` represents one graph. The CSV files contain a series of behavior events.
 
     We expect the following dataframe columns for the results:
     - sourceId: The name of the source system entity
@@ -24,6 +29,9 @@ def read_all_events(event_folder):
     - pid0: The process ID of the first involved executable
     - pid1: An optional ID of a second invovlved executable
     - graphId: The ID of the provenance graph, as integer
+
+    :param event_folder: The folder which contains all graphs as .csv files
+    :return: A pandas DataFrame with all behavior events in stacked format, plus the label for each graph as dictionary
     """
     csv_files = list(Path(event_folder).rglob("*.csv"))
     csv_files = [str(x) for x in csv_files]

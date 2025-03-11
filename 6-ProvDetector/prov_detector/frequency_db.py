@@ -1,6 +1,6 @@
 import numpy as np
 import os
-from .common import read_all_events
+from .read_dataset import read_all_events
 
 
 GRAPH_INDEX_IN_CSV = 9

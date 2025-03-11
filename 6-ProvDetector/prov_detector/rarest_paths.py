@@ -1,5 +1,5 @@
 import os
-from .common import read_all_events
+from .read_dataset import read_all_events
 import math
 import bisect
 import networkx as nx
