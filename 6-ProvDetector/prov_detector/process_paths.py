@@ -15,7 +15,7 @@ INDEX_GRAPH_LABEL = 1
 INDEX_PATHS = 2
 WORD_SEPERATOR = " ||| " # must NOT be present in dataset!
 
-def convert_paths_to_sentences(rare_paths, sentence_db, subpath_length_limit, max_num_subpaths_per_graph, overwrite):
+def convert_paths_to_sentences(rare_paths, sentence_db, subpath_length_limit, max_num_subpaths_per_graph):
     """
     Do all preprocessing on paths:
     - split huge paths into manageable sub-paths
@@ -28,19 +28,12 @@ def convert_paths_to_sentences(rare_paths, sentence_db, subpath_length_limit, ma
         - sentence_db: File in which all sentences will get stored
         - path_length_limit: Max length of a path, split up longer paths
         - max_num_subpaths: The maximal number of sub-paths we use, per graph
-        - overwrite: What to do when sentence_db already exists
     
     Return:
         - graph_names: The graph name per sentence
         - labels: The label per sentence (0 or 1)
         - sentences: The rare paths, translated to an English sentences
     """
-    # check if DB already exists
-    if not overwrite and os.path.isfile(sentence_db):
-        print("Sentence DB already present, don't overwrite")
-        with open(sentence_db, mode='r') as f:
-            db = np.load(sentence_db)
-            return db['graph_names'], db['labels'], db['sentences']
     graph_names, sub_path_labels, sub_paths = chunk_paths(rare_paths, subpath_length_limit, max_num_subpaths_per_graph)
     sentences = [pathToSentence(s) for s in sub_paths]
     print("Writing {} sentences to DB".format(len(sentences)))

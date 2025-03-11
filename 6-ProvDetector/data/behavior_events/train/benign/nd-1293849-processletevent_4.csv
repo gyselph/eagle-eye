@@ -1,0 +1,30 @@
+sourceId,sourceType,destinationId,destinationType,action,processName,timestamp,pid0,pid1
+graph_head,process,-,process,start,graph_head,-1,-1,399.0
+-,process,firefox.exe,process,start,-,1557242325469000000,399,41.0
+deviceaccess.dll,file,firefox.exe,process,read,firefox.exe,1557242331093000000,41,
+deviceaccess.dll,file,firefox.exe,process,read,firefox.exe,1557242331093000001,41,
+kernelbase.dll,file,firefox.exe,process,read,firefox.exe,1557242331094000000,41,
+file_root,file,firefox.exe,process,read,firefox.exe,1557242331096000000,41,
+windows.devices.enumeration.dll,file,firefox.exe,process,read,firefox.exe,1557243855175000000,41,
+windows.devices.enumeration.dll,file,firefox.exe,process,read,firefox.exe,1557243855176000000,41,
+biwinrt.dll,file,firefox.exe,process,read,firefox.exe,1557243855176000001,41,
+biwinrt.dll,file,firefox.exe,process,read,firefox.exe,1557243855176000002,41,
+deviceassociation.dll,file,firefox.exe,process,read,firefox.exe,1557243855177000000,41,
+deviceassociation.dll,file,firefox.exe,process,read,firefox.exe,1557243855177000001,41,
+word 2013.lnk,file,firefox.exe,process,read,firefox.exe,1557244477321000000,41,
+wordicon.exe,file,firefox.exe,process,read,firefox.exe,1557244477321000001,41,
+installer,file,firefox.exe,process,read,firefox.exe,1557244477322000000,41,
+windows,file,firefox.exe,process,read,firefox.exe,1557244477322000001,41,
+{************************************},file,firefox.exe,process,read,firefox.exe,1557244477323000000,41,
+office15,file,firefox.exe,process,read,firefox.exe,1557244477338000000,41,
+winword.exe,file,firefox.exe,process,read,firefox.exe,1557244477338000001,41,
+microsoft office,file,firefox.exe,process,read,firefox.exe,1557244477338000002,41,
+**********.automaticdestinations-ms,file,firefox.exe,process,read,firefox.exe,1557244477339000000,41,
+**********.customdestinations-ms,file,firefox.exe,process,read,firefox.exe,1557244477339000001,41,
+customdestinations,file,firefox.exe,process,read,firefox.exe,1557244477339000002,41,
+automaticdestinations,file,firefox.exe,process,read,firefox.exe,1557244477339000003,41,
+firefox.exe,process,firefox.exe,process,start,firefox.exe,1557244545703000000,41,0.0
+windows.cortana.proxystub.dll,file,firefox.exe,process,read,firefox.exe,1557244545748000000,0,
+windows.cortana.proxystub.dll,file,firefox.exe,process,read,firefox.exe,1557244545748000001,0,
+firefox.exe,file,firefox.exe,process,read,firefox.exe,1557244545751000000,0,
+firefox.exe,process,firefox.exe,process,start,firefox.exe,1557244547694000000,0,1.0

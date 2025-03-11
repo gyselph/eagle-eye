@@ -1,6 +1,6 @@
 import numpy as np
 import os
-from common import *
+from .common import *
 
 
 GRAPH_INDEX_IN_CSV = 9
@@ -12,13 +12,7 @@ def load_frequency_db(frequency_db, entities_db):
     return frequency_db, entities_db
 
 
-def create_frequency_db(event_folder, target_frequency_db, target_entities_db, overwrite):
-    # check if DB already exists
-    if not overwrite and (os.path.isfile(target_frequency_db) or os.path.isfile(target_entities_db)):
-        print("Frequency DB already present, don't overwrite")
-        frequency_db = read_object_from_file(target_frequency_db)
-        entities_db = read_object_from_file(target_entities_db)
-        return frequency_db, entities_db
+def create_frequency_db(event_folder, target_frequency_db, target_entities_db):
     # read in events from all event CSV files
     _, events_as_list, list_of_graph_ids, _ = read_all_events(event_folder)
     print("Generating frequency database for {} events ...".format(len(events_as_list)))

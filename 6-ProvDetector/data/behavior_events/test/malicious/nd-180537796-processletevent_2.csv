@@ -1,0 +1,15 @@
+sourceId,sourceType,destinationId,destinationType,action,processName,timestamp,pid0,pid1
+graph_head,process,msmpeng.exe,process,start,graph_head,-1,-1,196.0
+passwordfile.dat,file,msmpeng.exe,process,read,msmpeng.exe,1523545843004000000,196,
+hjauwl01,file,msmpeng.exe,process,read,msmpeng.exe,1523546115418000000,196,
+msmpeng.exe,process,msmpeng.exe,process,start,msmpeng.exe,1523546115440000000,196,594.0
+msmpeng.exe,process,mpdiag.bin,file,write,msmpeng.exe,1523546115485000000,196,
+msmpeng.exe,process,mpenginedb.db-wal,file,write,msmpeng.exe,1523546115565000000,196,
+msmpeng.exe,process,mplog-********-******.log,file,write,msmpeng.exe,1523573189126000000,196,
+msmpeng.exe,process,msmpeng.exe,process,start,msmpeng.exe,1523574611506000000,196,598.0
+msmpeng.exe,process,msmpeng.exe,process,start,msmpeng.exe,1523588986945000000,196,589.0
+msmpeng.exe,process,********************************,file,write,msmpeng.exe,1523588987120000000,196,
+msmpeng.exe,process,********************************,file,write,msmpeng.exe,1523588987150000000,196,
+msmpeng.exe,process,********************************,file,write,msmpeng.exe,1523588987204000000,196,
+msmpeng.exe,process,msmpeng.exe,process,start,msmpeng.exe,1523589381644000000,196,596.0
+msmpeng.exe,process,********************************,file,write,msmpeng.exe,1523589382256000000,196,

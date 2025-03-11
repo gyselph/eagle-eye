@@ -1,0 +1,21 @@
+sourceId,sourceType,destinationId,destinationType,action,processName,timestamp,pid0,pid1
+graph_head,process,firefox.exe,process,start,graph_head,-1,-1,133.0
+firefox.exe,process,firefox.exe,process,start,firefox.exe,1557244559794000000,133,431.0
+winword.exe,file,firefox.exe,process,read,firefox.exe,1557245187586000000,431,
+the game is played by moving a crosshair across the sky background via a trackball and pressing one of three buttons to launch a counter.docx,file,firefox.exe,process,read,firefox.exe,1557245187588000000,431,
+file_root,file,firefox.exe,process,read,firefox.exe,1557245187588000001,431,
+users,file,firefox.exe,process,read,firefox.exe,1557245187589000000,431,
+admin,file,firefox.exe,process,read,firefox.exe,1557245187589000001,431,
+microsoft office,file,firefox.exe,process,read,firefox.exe,1557245187590000000,431,
+winword.exe,file,firefox.exe,process,read,firefox.exe,1557245187590000001,431,
+office15,file,firefox.exe,process,read,firefox.exe,1557245187591000000,431,
+automaticdestinations,file,firefox.exe,process,read,firefox.exe,1557245187594000000,431,
+**********.automaticdestinations-ms,file,firefox.exe,process,read,firefox.exe,1557245187594000001,431,
+firefox.exe,process,**********.automaticdestinations-ms,file,write,firefox.exe,1557245187642000000,431,
+**********.automaticdestinations-ms,file,firefox.exe,process,read,firefox.exe,1557245187713000000,431,
+desktop.ini,file,firefox.exe,process,read,firefox.exe,1557245187750000000,431,
+desktop,file,firefox.exe,process,read,firefox.exe,1557245187752000000,431,
+recent,file,firefox.exe,process,read,firefox.exe,1557245187765000000,431,
+roaming,file,firefox.exe,process,read,firefox.exe,1557245187765000001,431,
+the game is played by moving a crosshair across the sky background via a trackball and pressing one of three buttons to launch a counter.lnk,file,firefox.exe,process,read,firefox.exe,1557245187794000000,431,
+firefox.exe,process,the game is played by moving a crosshair across the sky background via a trackball and pressing one of three buttons to launch a counter.lnk,file,write,firefox.exe,1557245187797000000,431,

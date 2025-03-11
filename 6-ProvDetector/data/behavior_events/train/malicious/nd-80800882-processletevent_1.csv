@@ -1,0 +1,13 @@
+sourceId,sourceType,destinationId,destinationType,action,processName,timestamp,pid0,pid1
+graph_head,process,explorer.exe,process,start,graph_head,-1,-1,834.0
+tropical,file,explorer.exe,process,read,explorer.exe,1557941599337000000,834,
+explorer.exe,process,explorer.exe,process,start,explorer.exe,1557941880819000000,834,253.0
+explorer.exe,process,explorer.exe,process,start,explorer.exe,1557942045811000000,834,858.0
+explorer.exe,process,explorer.exe,process,start,explorer.exe,1557942528722000000,834,842.0
+explorer.exe,process,cachedimage_1024_768_pos4.jpg,file,write,explorer.exe,1557942533916000000,834,
+explorer.exe,process,explorer.exe,process,start,explorer.exe,1557943065176000000,834,859.0
+explorer.exe,process,explorer.exe,process,start,explorer.exe,1557943175815000000,834,256.0
+explorer.exe,process,explorer.exe,process,start,explorer.exe,1557943368745000000,834,860.0
+explorer.exe,process,explorer.exe,process,start,explorer.exe,1557943580058000000,834,857.0
+explorer.exe,process,explorer.exe,process,start,explorer.exe,1557943828119000000,834,845.0
+explorer.exe,process,explorer.exe,process,start,explorer.exe,1557944115422000000,834,863.0

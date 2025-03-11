@@ -1,0 +1,12 @@
+sourceId,sourceType,destinationId,destinationType,action,processName,timestamp,pid0,pid1
+graph_head,process,svchost.exe,process,start,graph_head,-1,-1,832.0
+tropical,file,svchost.exe,process,read,svchost.exe,1557898112492000000,832,
+svchost.exe,process,$logfile,file,write,svchost.exe,1557898128239000000,832,
+svchost.exe,process,$mft,file,write,svchost.exe,1557898134616000000,832,
+virtuous,file,svchost.exe,process,read,svchost.exe,1557898188945000000,832,
+svchost.exe,process,$usnjrnl:$j,file,write,svchost.exe,1557898193278000000,832,
+svchost.exe,process,$mft::$bitmap,file,write,svchost.exe,1557898201328000000,832,
+svchost.exe,process,$bitmap,file,write,svchost.exe,1557898219964000000,832,
+svchost.exe,process,file_root,file,write,svchost.exe,1557898222221000000,832,
+svchost.exe,process,acuity,file,write,svchost.exe,1557898222221000001,832,
+svchost.exe,process,scans,file,write,svchost.exe,1557898222222000000,832,
