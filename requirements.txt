@@ -13,6 +13,7 @@ fonttools==4.54.1
 fsspec==2024.10.0
 gast==0.6.0
 gdown==5.2.0
+gensim==4.3.3
 google-pasta==0.2.0
 grpcio==1.67.1
 h5py==3.12.1
@@ -32,7 +33,7 @@ ml-dtypes==0.4.1
 mpmath==1.3.0
 namex==0.0.8
 networkx==3.4.2
-numpy==2.0.2
+numpy==1.26.4
 opt_einsum==3.4.0
 optree==0.13.0
 packaging==24.1
@@ -51,10 +52,11 @@ requests==2.32.3
 rich==13.9.4
 safetensors==0.4.5
 scikit-learn==1.5.2
-scipy==1.14.1
+scipy==1.13.1
 sentence-transformers==3.2.1
 setuptools==75.3.0
 six==1.16.0
+smart-open==7.1.0
 soupsieve==2.6
 sympy==1.13.1
 tensorboard==2.18.0
