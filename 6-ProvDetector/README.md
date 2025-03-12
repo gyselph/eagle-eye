@@ -1,12 +1,12 @@
 # Re-implementation of ProvDetector
 
-This is a re-implementation of [ProvDetector](https://kangkookjee.io/wp-content/uploads/2021/06/provdetector-ndss2020.pdf)
+This is a re-implementation of [ProvDetector](https://kangkookjee.io/wp-content/uploads/2021/06/provdetector-ndss2020.pdf), which served as a baseline for malware detection.
 
-The following projects have helped to reproduce the original ProvDetector implementation:
+The following repositories have helped to reproduce the original ProvDetector implementation:
 - [Mimicry paper repository](https://bitbucket.org/sts-lab/mimicry-provenance-generator/src/master/provDetector/)
 - [Some random GitHub repository](https://github.com/nodiff-229/GAT_provdetector/blob/master/main.py)
 
-There are two versions of ProvDetector: the original unsupervised version, and our adaption to a supervised version. In the supervised setting, both malicious and benign data is seen during the training phase, and a random forest is trained on the binary classification task of malware detection.
+There are two versions of ProvDetector: the original **unsupervised** version, and our adaption to a **supervised** version. In the supervised setting, both malicious and benign data is seen during the training phase, and a random forest is trained on the binary classification task of malware detection.
 
 ## Run code
 
@@ -67,17 +67,17 @@ Each provenance graph should be stored as 1 CSV file. Below you can see the expe
 
 You can also find sample CSV files under the [behavior events folder](./behavior_events/).
 
-## Hyper-parameters
+## Hyperparameters
 
-The `main.py` file contains several critical hyper-parameters. Ideally, you perform your own hyper-parameter tuning on validation data.
-You can find all hyper-parameters for the DARPA 5D and REE-2023 dataset in the EagleEye paper, Appendix D. 
+The `main.py` file contains several critical hyperparameters. Ideally, you perform your own hyperparameter tuning on validation data.
+You can find all hyperparameters for the DARPA 5D and REE-2023 dataset in the EagleEye paper, Appendix D. 
 
 Below you will find an explanation of the settings:
 
 - `TRAIN_DATA`: The CSV data used for training ProvDetector. The folder should contain a `malicious` and a `benign` subfolder.
 - `TEST_DATA`: The CSV test data. Again, the folder should contain a `malicious` and a `benign` subfolder.
 
-Below you will find an explanation of the hyper-parameters:
+Below you will find an explanation of the hyperparameters:
 - `NUM_RARE_PATHS_PER_GRAPH_TRAIN`: Maximum number of rare paths per graph, for the training dataset.
 - `NUM_RARE_PATHS_PER_GRAPH_TEST`: Same as `NUM_RARE_PATHS_PER_GRAPH_TRAIN`, but for the test data set.
 - `SUBPATH_LENGTH_LIMIT`: On rare occasions, paths can be very long. If this happens, we break them up into chunks of this maximal length.

@@ -1,6 +1,7 @@
 # EagleEye: Transformer-based malware detection using provenance graphs
 
-This is the open source implementation of the [EagleEye paper](https://arxiv.org/abs/2408.09217), which was presented as a research paper at [eCrime 2024](https://apwg.org/event/ecrime2024/).
+This is the open source implementation of the [EagleEye paper](https://ieeexplore.ieee.org/document/10896250), titled "EagleEye: Attention to Unveil Malicious Event
+Sequences from Provenance Graphs". EagleEye which was presented as a research paper at [eCrime 2024](https://apwg.org/event/ecrime2024/).
 
 ![EagleEye system overview](figures/system_diagram_code_steps.png)
 
@@ -11,7 +12,7 @@ This is the open source implementation of the [EagleEye paper](https://arxiv.org
 * [Step 3: Command-line embedding](3-Command-line-embedding): The implementation for embedding command-line strings into high-dimensional vectors. This step adds additional security features to the provenance graphs.
 * [Step 4: Create dataset](4-Create-dataset): Turn the enriched provenance graphs into a dataset. This data pipeline starts with graphs generated in the previous two steps, and ends with a dataset which can be used for training of the ML model.
 * [Step 5: EagleEye training](5-EagleEye-training): Train a transformer from scratch to perform malware classification. This script leverages the dataset created in the previous [step 4](4-Create-dataset).
-* [Step 6: ProvDetector re-implementation](6-ProvDetector): A re-implementation of one of the malware detection baselines.
+* [ProvDetector re-implementation](6-ProvDetector): A re-implementation of one of the malware detection baselines.
 
 ## Step 1: Dataset collection
 
