@@ -61,10 +61,9 @@ Each provenance graph should be stored as 1 CSV file. Below you can see the expe
 |Column meaning|0: Full source name|1: Source type|2: Full destination name|3: Destination type|4: Action type|5: Name of (first) executable|6: Timestamp|7: (first) PID|8: optional, second PID|
 |File read|/data/file.txt|file|/bin/proc1.exe|process|read|proc1.exe|1000|1||
 |File write|/bin/proc1.exe|process|/data/file.txt|file|write|proc1.exe|1001|1||
-|Socket send|/bin/proc1.exe|process|192.168.0.1|socket|send|proc1.exe|1002|1||
-|Socket receive|192.168.0.1|socket|/bin/proc1.exe|process|recv|proc1.exe|1003|1||
-|Start new process|/bin/proc1.exe|process|/bin/proc2.exe|process|execve|proc1.exe|1004|1|2|
-|Start new process|/bin/proc2.exe|process|/bin/proc2.exe|process|clone|proc2.exe|1005|2|20|
+|Socket send|/bin/proc1.exe|process|192.168.0.1|socket|read|proc1.exe|1002|1||
+|Socket receive|192.168.0.1|socket|/bin/proc1.exe|process|write|proc1.exe|1003|1||
+|Start new process|/bin/proc1.exe|process|/bin/proc2.exe|process|start|proc1.exe|1004|1|2|
 
 You can also find sample CSV files under the [behavior events folder](./behavior_events/).
 
