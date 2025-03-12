@@ -25,15 +25,15 @@ def paths_to_sentences(rare_paths: List[Tuple], chunk_size_limit: int, max_num_c
     :param max_num_chunks: The maximal number of chunks per graph
     :return: A tuple consisting of 1) graph IDs, 2) labels, 3) sentences
 
-    Data format of rare paths explained:
-    `rare_paths` is a list of paths per graph. Each path is a tuple consisting of
+    The rarest paths have the following format:
+    The rare paths are a list of paths per graph. Each path is a tuple consisting of
       1) the graph ID
       2) the graph label
-      3) the rare path
-    The rare paths themselves are formed as follows:
-      1) A source system entity (id, type, and ?)
+      3) a list of rare paths
+    The rare paths themselves are a list of nodes, each of which consists of:
+      1) A source system entity (id, optional: pid, type, and ?)
       2) An action (action type, timestamp)
-      3) A target system entity (id, type, and ?)
+      3) A target system entity (id, optional: pid, type, and ?)
     """
     graph_ids, chunk_labels, chunks = _chunk_paths(rare_paths, chunk_size_limit, max_num_chunks)
     sentences = [_chunk_to_sentence(s) for s in chunks]
